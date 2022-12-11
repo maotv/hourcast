@@ -31,10 +31,10 @@ fn main() -> std::io::Result<()> {
             let nm = next.minute();
             let opt_buf: Option<[u8;4]> = match nm {
 
-                59 => Some([ 'Q' as u8, 1, one_minute_after.hour12().1 as u8, 0] ),
-                14 => Some([ 'Q' as u8, 2, one_minute_after.hour12().1 as u8, 0] ),
-                29 => Some([ 'Q' as u8, 3, one_minute_after.hour12().1 as u8, 0] ),
-                44 => Some([ 'Q' as u8, 4, one_minute_after.hour12().1 as u8, 0] ),
+                59 => Some([ 'Q' as u8, 0, one_minute_after.hour12().1 as u8, 0] ),
+                14 => Some([ 'Q' as u8, 1, one_minute_after.hour12().1 as u8, 0] ),
+                29 => Some([ 'Q' as u8, 2, one_minute_after.hour12().1 as u8, 0] ),
+                44 => Some([ 'Q' as u8, 3, one_minute_after.hour12().1 as u8, 0] ),
                 _ => None
 
             };
